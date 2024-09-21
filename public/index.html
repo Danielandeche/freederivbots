@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <title>Free Deriv Bots and Strategy</title>
+</head>
+<body class="light-theme">
+    <h1>FREE DERIV BOTS AND THEIR STRATEGY</h1>
+
+    <h2>Upload Deriv XML bot and strategy on how to use the bot</h2>
+
+    <!-- Theme switcher toggle -->
+    <div class="theme-switcher">
+        <label>
+            <input type="checkbox" id="theme-toggle">
+            <span>Toggle Dark Mode</span>
+        </label>
+    </div>
+
+    <div class="upload-container">
+        <input type="file" name="xmlFile" accept=".xml" required>
+        <input type="text" name="description" placeholder="Enter Bot strategy" required>
+        <button id="upload-btn">Upload</button>
+    </div>
+
+    <div id="file-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
