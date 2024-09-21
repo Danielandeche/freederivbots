@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    width: 90%;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -49,10 +48,12 @@ h1, h2 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 input[type="file"], input[type="text"] {
-    flex: 1;
+    flex: 1; /* Allow inputs to grow */
+    min-width: 150px; /* Set a minimum width for inputs */
     margin-right: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -66,6 +67,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 100px; /* Set a minimum width for the button */
 }
 
 button:hover {
@@ -108,4 +110,10 @@ a.download-btn {
 body.dark-theme .theme-switcher span {
     background-color: #333;
     color: #fff;
+}
+
+/* Adjust width to 100% for all elements */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
