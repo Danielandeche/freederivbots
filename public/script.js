@@ -1,7 +1,8 @@
 const fileList = document.getElementById("file-list");
 
+// Fetch uploaded files from the server
 function fetchFiles() {
-    fetch('https://freederivbots.vercel.app/files')
+    fetch('https://freederivbots.vercel.app/files')  // Ensure you use the correct URL
         .then(response => response.json())
         .then(files => {
             fileList.innerHTML = ''; // Clear previous file list
@@ -21,7 +22,7 @@ function fetchFiles() {
                 fileInfo.appendChild(fileDescription);
 
                 const downloadButton = document.createElement("a");
-                downloadButton.href = `https://freederivbots.vercel.app/download/${file.name}`; // Updated to use the new download route
+                downloadButton.href = `https://freederivbots.vercel.app/download/${file.name}`; // Ensure the download URL is correct
                 downloadButton.textContent = "Download";
                 downloadButton.classList.add("download-btn");
 
@@ -37,6 +38,7 @@ function fetchFiles() {
 // Fetch files on page load
 fetchFiles();
 
+// Handle file upload
 document.getElementById('upload-btn').addEventListener('click', function(event) {
     event.preventDefault();
     const formData = new FormData();
@@ -51,7 +53,7 @@ document.getElementById('upload-btn').addEventListener('click', function(event) 
     formData.append('xmlFile', fileInput.files[0]);
     formData.append('description', descriptionInput.value);
 
-    fetch('https://freederivbots.vercel.app/upload', {
+    fetch('https://freederivbots.vercel.app/upload', {  // Update the URL accordingly
         method: 'POST',
         body: formData,
     })
