@@ -42,18 +42,39 @@ h1, h2 {
     margin-right: 20px;
 }
 
-/* Styling for upload container */
+/* Button styling for Deriv Bots and Strategy sections */
+.section-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.section-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.section-buttons button:hover {
+    background-color: #0056b3;
+}
+
 .upload-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 input[type="file"], input[type="text"] {
-    flex: 1; /* Allow inputs to grow */
-    min-width: 150px; /* Set a minimum width for inputs */
+    flex: 1;
+    min-width: 150px;
     margin-right: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -67,7 +88,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    min-width: 100px; /* Set a minimum width for the button */
+    min-width: 100px;
 }
 
 button:hover {
@@ -112,8 +133,29 @@ body.dark-theme .theme-switcher span {
     color: #fff;
 }
 
-/* Adjust width to 100% for all elements */
+/* Full width adjustment for all elements */
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .upload-container {
+        flex-direction: column;
+    }
+
+    input[type="file"], input[type="text"] {
+        margin-bottom: 10px;
+    }
+
+    .section-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-buttons button {
+        margin-bottom: 10px;
+        width: 100%;
+    }
 }
