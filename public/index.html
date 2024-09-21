@@ -20,14 +20,20 @@
         </label>
     </div>
 
-    <!-- File upload section -->
+    <!-- Section buttons for Deriv Bots and Strategy -->
+    <div class="section-buttons">
+        <button id="deriv-bots-btn">Deriv Bots</button>
+        <button id="strategy-btn">Strategy</button>
+    </div>
+
+    <!-- Upload form -->
     <div class="upload-container">
-        <input type="file" name="xmlFile" accept=".xml" required>
-        <input type="text" name="description" placeholder="Enter Bot strategy" required>
+        <input type="file" id="file-input" required>
+        <input type="text" id="description-input" placeholder="Enter Bot strategy or description" required>
         <button id="upload-btn">Upload</button>
     </div>
 
-    <!-- File list display -->
+    <!-- Display the uploaded file list -->
     <div id="file-list"></div>
 
     <script src="script.js"></script>
