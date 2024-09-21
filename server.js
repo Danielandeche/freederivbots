@@ -7,8 +7,10 @@ const fs = require("fs");
 const app = express();
 const PORT = 3000;
 
-// Enable CORS
-app.use(cors());
+// Enable CORS for your Vercel app
+app.use(cors({
+    origin: 'https://freederivbots.vercel.app' // Replace with your front-end URL
+}));
 
 // Set up storage for uploaded files
 const storage = multer.diskStorage({
